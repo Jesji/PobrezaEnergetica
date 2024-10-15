@@ -1,0 +1,119 @@
+SERIE DE PASOS PARA REALIZAR EL ESTUDIO DE POBREZA ENERGETICA EN MEXICO 2023
+
+1. ASK: ¿CUAL ES EL VALOR DE INDICE DE POBREZA ENERGETICA EN MEXICO EN 2023? ¿COMO SE COMPARA CON EL DE AÑOS ANTERIORES?
+	-¿QUÉ tema estas explorando? = pobreza energetica
+	-¿cuál es el problema de interes a resolver? = saber cual es el indice de PE en Mexico
+	-¿qué metricas utilizaras? = datos de encuesta en hogares
+	-¿quién es el publico interesado? = estudiantes, políticos, académicos
+	-¿cuál es tu pubico para este analisis y como afecta tu proceso de analisis y presentación? = en su mayoria yo creo qeu son estudiantes, es decir estan en el proceso de aprender algun lenguaje de programacion y también algunos términos 
+	-¿de qué manera estos datos ayudarán a interesados a tomar decisiones? = a los estudiantes les puede ayudar para decidir hacia donde dirigir su carrera, a los expertos les puede ayudar como referencia. 
+
+	TAREAS CLAVE:
+	-Elegir caso practico
+	-idenfica el problema
+	-determina itnersados clavo
+	-explora datos y establece metrica
+
+Preguntas a resolver: 
+	1.¿qué es la pobreza energética? 
+	2.¿cómo se mide la pobreza energética? 
+	3.¿cual es el valor del indice de pobreza energética en México en 2022? 
+	4.¿cómo ha ido variando el valor de este indice? 
+	5.¿cual es el estado mas pobre energéticamente, cual el mas rico? 
+	6.¿el índice aumento o disminuyó despues de la pandemia? 
+
+2. PREPARE: ¿DE DONDE SE OBTIENEN LOS DATOS? ¿ES NECESARIO LIMPIARLOS ? 
+	-¿donde se ubican tus datos? = en los sitios del inegi
+	-¿como estan organizados los datos? = vienen en tablas de excel
+	-¿hay problemas con el sesgo o credibildiad de datos? ¿son confiables originaes, integrales, actuales y citados? = quizá el problema de credibilidad es que son poco representativos respecto al tamaño de la muestra de hogares en el país, sin embargo es lo que hay. Por otro lado si son originales y el INEGI respalda la confiabilidad e integralidad 
+	-¿cómo estas abordando la autorización, privacidad, seguridad y accesibilidad? = DE ACUERDO AL VISO DE PRIVACIDAD DE INEGI PARA PROTECCION DE DATOS PERSONALES 
+	-¿cómo verificaste integridad de los datos? = A TRAVES DE LOS PARAMETROS CON LOS QUE INEGI ELIGE EL TAMAÑO DE MUESTRA
+	-¿de qué manera te ayuda a repsonder tu pregunta? = POrque estos datos forman parte de la metodología ya creada
+	-¿existe algún problema con los datos? = EL MAS SIGNIFICATIVO ES QUE LA variable estufa_Chi TIENE MUCHAS FILAS VACIAS Y CREO QUE NO SE DEBERIA USAR PARA EL ANALISIS
+
+	TAREAS:
+	-recopila datos y almacenalos adecuadamente
+	-identifica como estan organizados
+	-ordena y filtra los datos
+	-determina credibilidad de datos
+
+3. PROCESS: DESCRIBIR LA METODOLOGÍA PARA CALCULAR EL INDICE.  ¿CUAL ES LA METODOLOGÍA ESPECÍFICA PARA CALCULAR EL VALOR DEL INDICE DE POBREZA ENERGETICA? 
+	-¿qué herramientas eliges y por qué? = excel para el analisis cuantitativo porque los datos ya estan en excel, tableu o python para hacer los gráficos, SE UTILIZÓ SQL PARA HACER LOS FILTROS DE LOS DATOS Y PYTHON PARA LAS MULTIPLICACIONES Y SUMAS DE CADA FILA EN CADA VARIABLE
+	-¿has asegurado la integridad de tus datos? = SI DE ACUERDO ALDOCUMENTO QUE DESCRIBE LA METODOLOGÍA SEGUIDA POR INEGI EN ESTE ESTUDIO
+	-¿Qué pasos seguiste para garatinzar que los datos estén limpios? = REVISAR EN EXCEL QUE NO HUBIERA VALORES DISTINTOS A LOS ESPERADOS EN CADA COLUMNA 
+	-¿cómo puedes verificar que tus datos estan limpios y listos para analizar? = buscando celdas vacias o con caracteres distintos a los esperados
+	-¿documentaste tu proceso de limpieza para poder revisar y compartir estos resultados? = DEBO DOCUMENTAR LA LIMPEIZA DA DATOS.
+
+	TAREAS:
+	-verifica si hay errores en los datos
+	-transforma datos al tipo correcto
+	-documenta el proceso de limpieza
+	-elige tus herramientas 
+
+4. ANALIZE: ESCRIBIR SOBRE CUAL DE LOS RUBROS DE POBREZA ENERGÉTICA ES EL QUE TIENE MENOR CALIFICACIÓN, SI HAY TENDENCIAS POR ZONA GEOGRAFICA Y COMO HA SIDO EL CAMBIO EN LOS ULTIMOS AÑOS
+	-¿como deberias organizar tus datos para realizar un analisis sobre estos? = SE PASARON LAS VARIABLES DE LA ENCUESTA A VARAIBLES BOOLEANAS QUE SON LAS QUE SE DEBEN USAR PARA EL ANALISIS MEPI, Y SE CREO UNA TABLA PARA REALIZAR EL ANALISIS USANDO SQL.
+	-¿tus datos se formatearon adecuadamente? = SI SE LE DIO FORMATO BOOLEANO PARA SEGUIR LA METODOLOGIA DEL ANALISIS
+	-¿qué sorpresas descubiste de los datos?  = HAY UNA COLUMNA CON MUCHAS FILAS VACIAS, HAY INCERTIDUMBRE SOBRE COMO EVALUAR LA VARIABLE DE CONTAMINACION EN EL INTERIOR DE LA VIVIENDA 
+	-¿qué tendencias o relaciones eoncraste en los datos? = AL COMPARAR CON EL ESTUDIO DE SANTILLAN NO SE ENCONTRARON LOS MISMOS RESULTADOS, PERO SI SE ENCONTRARON VALORES SIMILARES, CREO QUE SERIA BUENA IDEA ESCRIBIRLE PARA VER SI PODEMOS PLATICAR UN RATO Y QUE YO LE HAGA PREGUNTAS. 
+	-¿de qué manera esas conclusiones responden a tu pregunta o resuelven tu problema? =  PUES SE ESTÁ 
+
+	TAREAS:
+	-agrega tus datos para que sean utiles y accesibles
+	-organiza y da formato a tus datos
+	-realiza calculos
+	-identifica tendencias y relaciones
+
+5. SHARE: PUBLICAR MAPAS Y EXPLICACIÓ NDE RESULTADOS EN MI BLOG
+	-¿qué historia cuentan tus datos? = COMO HA CAMBIADO EL INDICE DE POBREZA ENERGETICA A LO LARGO DEL TIEMPO, CUAL ES EL MUNICIPIO/ ESTAOD MAS Y MENOS POBRE ENERGETICAMENTE DE MEXICO
+	-¿de qué manera tus hallazgos se relacionan con tu pregunta original? = YO CREO QUE SERÉ CAPAZ DE RESPONDER LA PREGUNTA ORIGINAL
+	-¿quién estu audiencia? ¿cual es la mejor manera de comunicarte con ellos? = MI AUDIENCIA YO CREO QUE SON ESTUDIANTES INTERESADOS EN LA POBREZA ENERGETICA, ME PUEDE COMUNICAR POR ELLOS EN MI BLOG PERO TAMBIEN EN YOUTUBE
+	-¿la visualizacion de datos puede ayudarte a compartir tus hallazagos? = CLARO, ETRE MAS CLARA Y MAS ACTRACTIVA LAS VISUALIZACIONES MEJOR
+	-¿tu representacion es accesible para tu publico? = HACER IMAGENES CLARAS BONITAS Y ACCESIBLES
+
+	TAREAS:
+	-determina mejor manera de compartir hallazgos
+	-crea visualizaciones de datos efectivas
+	-presenta hallazgos
+	-garantiza que el publico peuda acceder a tu trabajo
+
+6. ACT
+	-¿cual es tu conclusion final en fucion de tu analisis? = AUN NO LO SÉ
+	-¿como puedes aplicar tu sconclusiones? = TRATANDO DE LLEGAR A MAS PERSONAS PARA QUE SE DIFUNDA EL CONCEPTO DE POBREZA ENERGÉTICA  
+	-¿existen algunos pasos que tu o tus intresados peudan seugir segun tus hallazgos?  = PUES QUIZA TOMAR COMO REFERENCIA LOS RESULTADOS QUE PRESENTO PARA SUS PROPIOS TRABAJOS
+	-¿existen adatos adicionales que podrias utilizar para ampliar tus hallazgos? = NO LO SÉ 
+	-¿cómo puedes presentar tu caso práctico en tu portafolio? = ADJUNTAR EL LINK DE LA ENTRADA DE MI BLOG Y QUIZÁ DEL RESPOSOTORIO DE TRABAJO EN GITHUB
+
+	TAREAS:
+	-Comparte con los interesados los trabajos que consideres pendientes segun tu estudio
+	-determina si mas datos pueden proporcionarte conclusiones nuevas
+	-carga tus nuevas conclusiones a tu portafolio.
+
+TEXTO 
+
+reguntas a resolver: 
+	1.¿qué es la pobreza energética? 
+La defición del término pobreza energética ha ido evolucionando con el paso de los años y dependiendo del lugar en el que se aplique. La primer definición oficial y que fue reconocida por el gobierno del Reino Unido fue la propuesta por Brenda Boardman en 1991 y que describe a un hogar en pobreza energética (fuel poverty o pobreza de combustible) a aquel que gasta más del 10% de sus ingresos para mantener un nivel de calefacción adecuado CITE[2021EVALUA,2014GARCIA]. Por otro lado Vivien Foster et al. definieron a los hogares en pobreza energética como aquellos que se encuentran por debajo de un consumo de energía eléctrica básico previamente establecido conocido como línea de pobreza energética [2000FOSTER], mientras que la ONU ha definido a la pobreza energética como la falta de acceso a electricidad y la dependencia de combustibles contaminantes e ineficientes [2021EVALUA]. Como se observa, el concepto de pobreza energética depende de varias circunstancias, sin embargo, una definición general puede ser: "Pobreza energética: condición de carencia en el acceso a servicios energéticos mímimos de calidad que impacta de manera negativa la vida de las personas que la padecen". Teniendo en cuenta que el concepto de pobreza energética requiere considerar distintos factores, algunos autores han propuesto índices multidimensionales que toman en cuenta los distintos servicios energéticos mínimos que requiere un hogar. Por ejemplo la asociación Practical Action propuso un índice de acceso a energía o EAI (Energy Access Index) en el que se define un nivel mínimo suministro de servicios energéticos [PRACTICALACTION2010]. Otro índice para medir la pobreza energética es el Indice multidimensional de Pobreza Energética o MEPI por sus siglas en ingles (Multidimensional Energy Poverty INdex) que fue propuesto por Nussbaumer et al [NUSBAUMER2012] y considera 5 servicios energéticos: cocción de alimentos, iluminación, electrodomésticos, entretenimiento o educación y comunicación. Nussbaumer aplicó el MEPI a distintos países africanos y esta metodología también se ha aplicado a países de AsiA y Latinoamerica, lo que permite tener un índice estándarizado para medir la pobreza eenrgética [,SANTILLAN2020]. 
+
+En México se han realizado algunos trabajos con el objetivo de medir la pobreza energética, Rigoberto García en 2016 utilizó la metodología de Satisfacción de necesidades absolutas de energía que considera los servicios energéticos de calentamiento de agua, cocción de alimentos, refrigerador, iluminación, aire acondicionado y entretenimiento para calcular la pobreza energética en México, concluyendo que el 36.7% de los hogares mexicanos se encuentran en pobreza energética [GARCIA2016]. Santillan et al [SANTILLAN2020] realizaron una adaptación del MEPI a México tomando datos de la Encuenta Nacional de INgresos y gastos dne los hogares elaborada por el INEGI, al igual que García previamente, ellos calcularon un índice de pobreza energética del 29.7%, hay que tener en cuenta que García tomo datos de la encuenta de 2012 y Santillan de la encuesta de 2016, además de que la metodología utilizada fue diferente. Bonilla et al propusieron una modificación al MEPI para México presentado por Santillan y le agregaron la regionalización del país en regiones climática y bioclimáticas para considerar el servicio energético de confort térmico, que no se toma en cuenta en el MEPI original. 
+
+MEPI
+El índice de pobreza energética multidimensional toma en cuenta 5 dimensiones: cocción de alimentos, iluminación, electrodomésticos, entretenimiento/educación, y comunicación. Cada uno de estas dimensiones se relaciona con un indicador que se puede obtener de datos demográficos, la dimensión de iluminación se relaciona con el acceso a electricidad, los electrodomésticos se relaciona con si la vivienda cuenta o no con refrigerador, el entretenimiento se relaciona con la existencia de radio o televisión en la vivienda, la comunicación se relaciona con la posesión de telefóno fijo o móvil. La dimension de cocción de alimentos se divde en dos indicadores: tipo de combustible y la contaminacion que produce el combustible con que se cocina, este indicador se refiere a si en la vivienda se utiliza fogón, brasero o otra instalación para cocinar que use un combustible diferente a electricidad o gas. 
+
+
+
+	2.¿cómo se mide la pobreza energética?  
+	3.¿como se ha medido el indice de pobreza en Mexico? 
+	4.explica a detalle como funciona el mepi
+	3.¿cual es el valor del indice de pobreza energética en México en 2022? 
+	4.¿cómo ha ido variando el valor de este indice? 
+	5.¿cual es el estado mas pobre energéticamente, cual el mas rico? 
+	6.¿el índice aumento o disminuyó despues de la pandemia? 
+
+DEFINICIÓN DE POBREZA ENERGÉTICA Y PORQUE ES IMPORTANTE MEDIRLA
+1. 2011GARCIA: ~ INcapacidad de obtener los servicios de energía adecuados con un gasto del 10% del ingreso del hogar. No disponer del equipamiento energético que brinde un nivel mínimo de bienestar. 
+
+
+
+
+
+COMO SE MIDE LA POBREZA ENERGÉTICA

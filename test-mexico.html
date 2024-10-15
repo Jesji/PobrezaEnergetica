@@ -1,0 +1,201 @@
+<html>
+  <head>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+var gmapa_dispersion = {};
+google.charts.load('current', {
+  'packages': ['geochart'],
+  // See: https://developers.google.com/chart/interactive/docs/basic_load_libs#load-settings
+  'mapsApiKey': 'XXXXX'
+});
+google.charts.setOnLoadCallback(drawRegionsMap);
+
+function drawRegionsMap() {
+  //mapa listo
+  gmapa_dispersion = new google.visualization.GeoChart(document.getElementById('regions_div'));
+  //Cargamos datos a arreglo de gmapData
+  var gmapData = [];
+  gmapData.push(['States', 'Estado', 'MEPI']);
+  //definimos columnas States (clave ISO), Estado (etiqueta de region), Visitantes (dato numerico a graficar)
+  for (d in regiones_ISO) {
+    gmapData.push([regiones_ISO[d].clave, regiones_ISO[d].entidad, regiones_ISO[d].cuenta])
+  } //cargamos los datos de regiones_ISO al arreglo de gmapData
+  gmapData = google.visualization.arrayToDataTable(gmapData);
+  //conversion de arreglo a DataTable para google
+  gmapa_dispersion.draw(gmapData, {
+    displayMode: 'regions', //indicamos al mapa que se centre en una region en lugar de global
+    region: 'MX', //region a mostrar es solo Mexico
+    resolution: 'provinces' //mostrar "division politica" entre estados
+  });
+}
+
+var regiones_ISO = [{
+    'entidad': 'Aguascalientes',
+    'cuenta': 0.008,
+    'clave': 'MX-AGU'
+  },
+  {
+    'entidad': 'Baja California',
+    'cuenta': 0.015,
+    'clave': 'MX-BCN'
+  },
+  {
+    'entidad': 'Baja California Sur',
+    'cuenta': 0.030,
+    'clave': 'MX-BCS'
+  },
+  {
+    'entidad': 'Campeche',
+    'cuenta': 0.134,
+    'clave': 'MX-CAM'
+  },
+  {
+    'entidad': 'Chiapas',
+    'cuenta': 0.278,
+    'clave': 'MX-CHP'
+  },
+  {
+    'entidad': 'Chihuaha',
+    'cuenta': 0.034,
+    'clave': 'MX-CHH'
+  },
+  {
+    'entidad': 'Coahuila',
+    'cuenta': 0.011,
+    'clave': 'MX-COA'
+  },
+  {
+    'entidad': 'Colima',
+    'cuenta': 0.067,
+    'clave': 'MX-COL'
+  },
+  {
+    'entidad': 'Ciudad de México',
+    'cuenta': 0.002,
+    'clave': 'MX-DIF'
+  },
+  {
+    'entidad': 'Durango',
+    'cuenta': 0.018,
+    'clave': 'MX-DUR'
+  },
+  {
+    'entidad': 'Guanajuato',
+    'cuenta': 0.049,
+    'clave': 'MX-GUA'
+  },
+  {
+    'entidad': 'Guerrero',
+    'cuenta': 0.213,
+    'clave': 'MX-GRO'
+  },
+  {
+    'entidad': 'Hidalgo',
+    'cuenta': 0.140,
+    'clave': 'MX-HID'
+  },
+  {
+    'entidad': 'Jalisco',
+    'cuenta': 0.021,
+    'clave': 'MX-JAL'
+  },
+  {
+    'entidad': 'México',
+    'cuenta': 0.068,
+    'clave': 'MX-MEX'
+  },
+  {
+    'entidad': 'Michoacán',
+    'cuenta': 0.079,
+    'clave': 'MX-MIC'
+  },
+  {
+    'entidad': 'Morelos',
+    'cuenta': 0.055,
+    'clave': 'MX-MOR'
+  },
+  {
+    'entidad': 'Nayarit',
+    'cuenta': 0.068,
+    'clave': 'MX-NAY'
+  },
+  {
+    'entidad': 'Nuevo León',
+    'cuenta': 0.027,
+    'clave': 'MX-NLE'
+  },
+  {
+    'entidad': 'Oaxaca',
+    'cuenta': 0.260,
+    'clave': 'MX-OAX'
+  },
+  {
+    'entidad': 'Puebla',
+    'cuenta': 0.084,
+    'clave': 'MX-PUE'
+  },
+  {
+    'entidad': 'Querétaro',
+    'cuenta': 0.063,
+    'clave': 'MX-QUE'
+  },
+  {
+    'entidad': 'Qintana Roo',
+    'cuenta': 0.093,
+    'clave': 'MX-ROO'
+  },
+  {
+    'entidad': 'San Luis Potosí',
+    'cuenta': 0.094,
+    'clave': 'MX-SLP'
+  },
+  {
+    'entidad': 'Sinaloa',
+    'cuenta': 0.028,
+    'clave': 'MX-SIN'
+  },
+  {
+    'entidad': 'Sonora',
+    'cuenta': 0.046,
+    'clave': 'MX-SON'
+  },
+  {
+    'entidad': 'Tabasco',
+    'cuenta': 0.173,
+    'clave': 'MX-TAB'
+  },
+  {
+    'entidad': 'Tamaulipas',
+    'cuenta': 0.036,
+    'clave': 'MX-TAM'
+  },
+  {
+    'entidad': 'Tlaxcala',
+    'cuenta': 0.038,
+    'clave': 'MX-TLA'
+  },
+  {
+    'entidad': 'Veracruz',
+    'cuenta': 0.166,
+    'clave': 'MX-VER'
+  },
+  {
+    'entidad': 'Yucatán',
+    'cuenta': 0.223,
+    'clave': 'MX-YUC'
+  },
+  {
+    'entidad': 'Zacatecas',
+    'cuenta': 0.02,
+    'clave': 'MX-ZAC'
+  },
+]
+
+
+
+    </script>
+  </head>
+  <body>
+    <div id="regions_div" style="width: 900px; height: 500px;"></div>
+  </body>
+</html>
