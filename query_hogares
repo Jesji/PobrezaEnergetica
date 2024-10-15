@@ -1,0 +1,14 @@
+WITH a AS (
+  SELECT folioviv, IF(combustible=1 OR combustible=2,1,0) AS combustible2, IF(disp_elect=5,1,0) AS electri, IF(estufa_chi="1" OR estufa_chi=" ", 0,1) AS estufa3
+  FROM `my-project0-390719.energy_poverty.viviendas2016`
+),
+ x AS (
+  SELECT *, IF(telefono=2 AND celular=2,1,0) AS telefono2 
+  FROM `my-project0-390719.energy_poverty.hogares`
+),
+ tempor AS (
+  SELECT folioviv, COUNT(folioviv) AS nu_hogares, IF(SUM(num_radio+num_tva+num_tvd)>=1,0,1) AS tv_radio, IF(SUM(num_refri)>=1,0,1) AS refri, SUM(x.telefono2 ) AS telefono3 
+ FROM x 
+ GROUP BY folioviv) 
+SELECT a.folioviv, a.combustible2, a.estufa3, a.electri, tempor.refri, tempor.tv_radio, tempor.telefono3, tempor.nu_hogares
+FROM a INNER JOIN tempor ON a.folioviv = tempor.folioviv 
